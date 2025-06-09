@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Fractional CFO Healthcare</title>
+  <meta name="description" content="Learn more about our founder — a CFO with 20 years of experience supporting healthcare companies with strategy, reporting, and growth." />
+  <meta name="keywords" content="healthcare CFO, about fractional CFO, executive finance, healthcare leadership" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<class="font-sans antialiased bg-white text-gray-900 dark:bg-gray-950">
+<div id="header-placeholder"></div>
+
+  <!-- Hero Section -->
+  <section class="text-center py-16 bg-gray-100">
+    <h1 class="text-5xl font-bold mb-4">About Us</h1>
+    <p class="text-xl max-w-2xl mx-auto">Built on two decades of CFO experience in healthcare, we help founders and operators bridge the gap between financial chaos and investor-grade clarity.</p>
+  </section>
+
+  <!-- Founder Bio -->
+  <section class="py-16">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="bg-white p-8 rounded shadow">
+        <h2 class="text-3xl font-semibold mb-4">Meet the Founder</h2>
+        <p class="text-lg text-gray-800 mb-4">
+          With over 20 years of experience in healthcare finance, our founder has served as CFO across multiple growth-stage and investor-backed organizations — from specialty care groups and diagnostics labs to digital health startups and CROs. 
+        </p>
+        <p class="text-lg text-gray-800 mb-4">
+          He’s led teams through everything from first-time audits to $100M exits, built finance functions from scratch, and translated complex operations into investor-ready metrics. His focus: give leaders better visibility, more confidence, and real control over their numbers.
+        </p>
+        <p class="text-lg text-gray-800 mb-4">
+          After years of seeing founders get lost in financial ambiguity, he launched this firm to offer the kind of hands-on CFO support that drives strategic decisions — without the full-time headcount.
+        </p>
+        <p class="text-lg text-gray-800">
+          Today, he partners with visionary operators across North America, turning messy data into momentum — and balance sheets into boardroom trust.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-blue-50 text-center">
+    <h2 class="text-3xl font-semibold mb-4">Get to Know Us Better</h2>
+    <p class="text-lg text-gray-700 mb-6">Your CFO might not be full-time — but your numbers still deserve full-time attention.</p>
+    <a href="contact.html" class="bg-blue-600 text-white px-6 py-3 rounded text-lg font-semibold">Let’s Talk</a>
+  </section>
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header-placeholder").innerHTML = data);
+
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+  </script>
+</body>
+</html>

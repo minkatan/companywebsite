@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Industries We Serve | Healthcare Finance</title>
+  <meta name="description" content="Explore how our fractional CFO services support VC and PE-backed healthcare businesses across clinical research, outpatient care, diagnostics, behavioral health, and more." />
+  <meta name="keywords" content="healthcare finance, fractional CFO healthcare, PE healthcare, VC healthcare, clinical research finance, diagnostics CFO" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans antialiased bg-white text-gray-900 dark:bg-gray-950">
+    <div id="header-placeholder"></div>
+  <!-- Hero Section -->
+  <section class="text-center py-16 bg-gray-100">
+    <h1 class="text-5xl font-bold mb-4">Industries We Serve</h1>
+    <p class="text-xl max-w-3xl mx-auto">From clinical research to patient-facing care, we provide tailored finance infrastructure that scales with every stage and strategy.</p>
+  </section>
+
+  <!-- Industry Sections -->
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-6 space-y-16">
+
+      <!-- Clinical Research -->
+      <div>
+        <h2 class="text-3xl font-semibold mb-4">Clinical Research Organizations (CROs)</h2>
+        <p class="text-gray-700 mb-4">Supporting biotech and pharma studies requires accurate site-level reconciliation, sponsor billing, and budget tracking. We help VC-backed and PE-owned CROs manage financial complexity across multiple trials and geographies.</p>
+        <ul class="list-disc pl-5 text-gray-800 space-y-1">
+          <li>Study startup and milestone billing frameworks</li>
+          <li>Budget variance analysis by protocol</li>
+          <li>PI payment automation and audit trail readiness</li>
+          <li>PE visibility into site-level profitability</li>
+        </ul>
+      </div>
+
+      <!-- Clinics & Specialty Practices -->
+      <div>
+        <h2 class="text-3xl font-semibold mb-4">Outpatient Clinics & Specialty Care Networks</h2>
+        <p class="text-gray-700 mb-4">From behavioral health to women's health, we support operational clinics with financial modeling, cash planning, and lender/investor reporting. Whether you’re a PE roll-up or a VC-backed platform, we support multi-site growth and consolidation.</p>
+        <ul class="list-disc pl-5 text-gray-800 space-y-1">
+          <li>Multi-location budget tracking and payroll modeling</li>
+          <li>Revenue cycle forecasting and claim aging dashboards</li>
+          <li>EBITDA normalization for acquisition prep</li>
+          <li>Bank covenant compliance and reporting packages</li>
+        </ul>
+      </div>
+
+      <!-- Diagnostics & Labs -->
+      <div>
+        <h2 class="text-3xl font-semibold mb-4">Diagnostics & Lab Testing Companies</h2>
+        <p class="text-gray-700 mb-4">We help diagnostics firms improve clarity across high-volume testing environments. For VC-funded startups launching new technology, or PE-backed providers scaling commercial ops, we deliver real-time financial tracking and cost structure transparency.</p>
+        <ul class="list-disc pl-5 text-gray-800 space-y-1">
+          <li>Test volume-based cost and revenue forecasting</li>
+          <li>Inventory and sample logistics spend tracking</li>
+          <li>Capital raise support and data room prep</li>
+          <li>Cash runway visibility with margin analysis</li>
+        </ul>
+      </div>
+
+      <!-- Telehealth & HealthTech -->
+      <div>
+        <h2 class="text-3xl font-semibold mb-4">Telehealth & Healthcare Technology</h2>
+        <p class="text-gray-700 mb-4">SaaS metrics, hybrid care models, and subscription pricing demand a CFO that understands startup velocity and investor metrics. We support HealthTech platforms through funding rounds and scalable finance system design.</p>
+        <ul class="list-disc pl-5 text-gray-800 space-y-1">
+          <li>SaaS metric dashboards (LTV, CAC, retention)</li>
+          <li>Product cost modeling and margin forecasting</li>
+          <li>Burn rate tracking and scenario planning</li>
+          <li>Fundraising deck financials and board support</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-blue-50 text-center">
+    <h2 class="text-3xl font-semibold mb-4">Not Sure If We Support Your Industry?</h2>
+    <p class="text-lg text-gray-700 mb-6">We likely do. Let’s talk about your structure, your challenges, and how finance can become a strategic advantage.</p>
+    <a href="contact.html" class="bg-blue-600 text-white px-6 py-3 rounded text-lg font-semibold">Schedule a Consultation</a>
+  </section>
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header-placeholder").innerHTML = data);
+
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+  </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!-- header.html -->
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+<header class="bg-white shadow-md z-50 relative">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <a href="index.html" class="text-xl font-bold text-blue-600">Compass CFO</a>
+
+    <!-- Mega Menu Navigation -->
+    <nav class="relative hidden md:block" x-data="{ open: false, timer: null }" @mouseenter="clearTimeout(timer); open = true" @mouseleave="timer = setTimeout(() => open = false, 300)">
+      <button class="font-medium text-gray-700 hover:text-blue-600">
+        Services
+      </button>
+
+      <!-- Mega Menu -->
+      <div x-show="open" x-transition class="absolute left-1/2 transform -translate-x-1/2 mt-4 w-screen max-w-5xl bg-white shadow-xl p-8 rounded grid grid-cols-4 gap-6 text-sm">
+        <!-- Foundation -->
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-wide text-gray-500 mb-2">Foundation</h3>
+          <ul class="space-y-1">
+            <li><a href="solution.html" class="hover:text-blue-600">Accounting Systems</a></li>
+            <li><a href="solution.html" class="hover:text-blue-600">Cash Flow Processes</a></li>
+            <li><a href="solution.html" class="hover:text-blue-600">Advisor Coordination</a></li>
+          </ul>
+        </div>
+        <!-- Health -->
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-wide text-gray-500 mb-2">Health</h3>
+          <ul class="space-y-1">
+            <li><a href="solution.html" class="hover:text-blue-600">Budgeting & Forecasting</a></li>
+            <li><a href="solution.html" class="hover:text-blue-600">Production & Ops</a></li>
+            <li><a href="solution.html" class="hover:text-blue-600">Banking & Capital</a></li>
+          </ul>
+        </div>
+        <!-- Growth -->
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-wide text-gray-500 mb-2">Growth</h3>
+          <ul class="space-y-1">
+            <li><a href="solution.html" class="hover:text-blue-600">Strategic Planning</a></li>
+            <li><a href="solution.html" class="hover:text-blue-600">Risk Assessments</a></li>
+            <li><a href="solution.html" class="hover:text-blue-600">Operating Rhythm</a></li>
+          </ul>
+        </div>
+        <!-- Value -->
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-wide text-gray-500 mb-2">Value</h3>
+          <ul class="space-y-1">
+            <li><a href="solution.html" class="hover:text-blue-600">Exit Planning</a></li>
+            <li><a href="solution.html" class="hover:text-blue-600">Readiness</a></li>
+            <li><a href="solution.html" class="hover:text-blue-600">Valuation & Multiples</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Static links -->
+    <nav class="space-x-4 text-gray-700 font-medium hidden md:block">
+      <a href="about.html" class="hover:text-blue-600">About</a>
+      <a href="industries.html" class="hover:text-blue-600">Industries</a>
+      <a href="contact.html" class="hover:text-blue-600">Contact</a>
+    </nav>
+  </div>
+</header>
