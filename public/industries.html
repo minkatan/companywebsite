@@ -8,6 +8,10 @@
   <meta name="keywords" content="healthcare finance, fractional CFO healthcare, PE healthcare, VC healthcare, clinical research finance, diagnostics CFO" />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    [x-cloak] { display: none !important; }
+  </style>
+   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 </head>
 <body class="font-sans antialiased bg-white text-gray-900">
     <div id="header-placeholder"></div>
@@ -80,14 +84,17 @@
   </section>
   <div id="footer-placeholder"></div>
 
+ 
   <script>
-    fetch("header.html")
-      .then(res => res.text())
-      .then(data => document.getElementById("header-placeholder").innerHTML = data);
-
-    fetch("footer.html")
-      .then(res => res.text())
-      .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+    document.addEventListener('alpine:init', () => {
+      fetch("header.html")
+        .then(r=>r.text())
+        .then(html=> {
+          document.getElementById("header-placeholder").innerHTML = html;
+          Alpine.initTree(document.getElementById("header-placeholder"));
+        });
+      fetch("footer.html").then(r=>r.text()).then(html=>document.getElementById("footer-placeholder").innerHTML = html);
+    });
   </script>
 </body>
 </html>

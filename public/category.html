@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solution Detail | Fractional CFO</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+<body class="font-sans antialiased bg-white text-gray-900">
+  <div id="header-placeholder"></div>
+
+  <section class="py-16 text-center">
+    <div class="max-w-4xl mx-auto px-6">
+      <h1 id="topic-title" class="text-4xl font-bold mb-4">Loading...</h1>
+      <p id="topic-description" class="text-lg text-gray-700">Please wait while we load the content.</p>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const topic = params.get("topic");
+
+    const content = {
+      "accounting-systems": {
+        title: "Accounting Systems",
+        description: "We implement or refine accounting systems like QuickBooks, Xero, or NetSuite to ensure compliance and clarity for startups and mid-sized PE-backed firms."
+      },
+      "cash-flow-processes": {
+        title: "Cash Flow Processes",
+        description: "Cash in, cash out — and everything in between. We build models, set cadence, and create visibility into your financial runway."
+      },
+      "advisor-coordination": {
+        title: "Advisor Coordination",
+        description: "We act as a central node between your legal, tax, and audit advisors to streamline communication and avoid dropped balls."
+      },
+      "exit-planning": {
+        title: "Exit Planning",
+        description: "Maximize your valuation. We align your financials with buyer expectations, clean up the story, and prep for due diligence."
+      },
+      "valuation-multiples": {
+        title: "Valuation & Multiples",
+        description: "Understand your worth. We help you benchmark, improve, and communicate valuation drivers to stakeholders and investors."
+      }
+    };
+
+    const titleElement = document.getElementById("topic-title");
+    const descElement = document.getElementById("topic-description");
+
+    if (topic && content[topic]) {
+      titleElement.textContent = content[topic].title;
+      descElement.textContent = content[topic].description;
+    } else {
+      titleElement.textContent = "Coming Soon";
+      descElement.textContent = "This section is under construction or the topic is invalid.";
+    }
+  </script>
+
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header-placeholder").innerHTML = data);
+
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+  </script>
+</body>
+</html>

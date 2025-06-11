@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exit & Transactions | Fractional CFO</title>
+  <meta name="description" content="Support for M&A, capital structuring, and succession strategies for healthcare businesses." />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    [x-cloak] { display: none !important; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+<body class="font-sans antialiased bg-white text-gray-900">
+
+  <div id="header-placeholder"></div>
+
+  <!-- Hero Section -->
+  <section class="text-center py-20 bg-gray-100">
+    <h1 class="text-5xl font-bold mb-6">Exit & Transaction Support</h1>
+    <p class="text-xl max-w-2xl mx-auto mb-8">Whether you're preparing for a sale, restructuring ownership, or raising capital, we’ll help you maximize valuation and minimize disruption.</p>
+
+  </section>
+
+  <!-- Service Breakdown -->
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-6 text-left space-y-16">
+      <div>
+        <h2 class="text-2xl font-semibold mb-4">M&A Advisory</h2>
+        <p class="text-lg text-gray-700">We guide clients through the full lifecycle of mergers, acquisitions, and divestitures — from readiness to deal execution. Our strategic and financial insight ensures alignment with valuation goals and operational priorities.</p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-semibold mb-4">Capital Structuring</h2>
+        <p class="text-lg text-gray-700">We help you optimize your capital stack, evaluate funding options, and prepare financial narratives for investors. Our support includes scenario modeling, covenant analysis, and lender/investor presentations.</p>
+      </div>
+
+      <img src="../images/image6.png" alt="M&A Roadmap" class="w-full max-w-1/2 mx-auto rounded-lg shadow" />
+      <div>
+        <h2 class="text-2xl font-semibold mb-4">Succession & Turnaround</h2>
+        <p class="text-lg text-gray-700">Whether transitioning to new leadership or correcting financial course, we design succession strategies, performance improvement plans, and turnaround playbooks that preserve value and instill confidence.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-16 bg-blue-50 text-center">
+    <h2 class="text-3xl font-semibold mb-4">Plan Your Strategic Exit with Confidence</h2>
+    <p class="text-lg text-gray-700 mb-6">Let’s talk about what success looks like at the end of your journey — and build a financial roadmap to get there.</p>
+    <a href="contact.html" class="bg-blue-600 text-white px-8 py-3 rounded text-lg font-semibold">Book Your Exit Strategy Call</a>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header-placeholder").innerHTML = data);
+
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+  </script>
+</body>
+</html>

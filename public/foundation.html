@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foundation Services | Fractional CFO for Healthcare</title>
+  <meta name="description" content="Build a solid finance foundation with interim CFO support, accounting systems setup, dashboards, and treasury management for healthcare companies." />
+  <meta name="keywords" content="interim CFO, healthcare finance, accounting systems, financial dashboards, treasury support, fractional CFO services" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    [x-cloak] { display: none !important; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+<body class="font-sans antialiased bg-white text-gray-900">
+
+  <div id="header-placeholder"></div>
+
+  <section class="text-center py-20 bg-gray-100">
+    <h1 class="text-4xl font-bold mb-4">Foundation Services</h1>
+    <p class="text-lg max-w-2xl mx-auto">Lay the groundwork for financial clarity with streamlined accounting, systems, and operational finance support tailored to healthcare startups and scaling practices.</p>
+  </section>
+
+  <section class="py-16">
+    <img src="../images/image4.png" alt="M&A Roadmap" class="w-full max-w-full mx-auto rounded-lg shadow" />
+    
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+
+      <!-- Interim CFO & Accounting -->
+      <div class="bg-white p-6 rounded shadow">
+        <h2 class="text-2xl font-semibold mb-2">Interim CFO & Accounting</h2>
+        <p class="text-gray-700 mb-4">Fill financial leadership gaps and fix the basics — fast.</p>
+        <ul class="list-disc pl-5 space-y-2 text-gray-800">
+          <li>Cash to accrual accounting transitions</li>
+          <li>Interim CFO leadership</li>
+          <li>Organizational design and benchmarking</li>
+        </ul>
+      </div>
+
+      <!-- Financial Systems & Dashboards -->
+      <div class="bg-white p-6 rounded shadow">
+        <h2 class="text-2xl font-semibold mb-2">Financial Systems & Dashboards</h2>
+        <p class="text-gray-700 mb-4">Bring your data to life and improve reporting.</p>
+        <ul class="list-disc pl-5 space-y-2 text-gray-800">
+          <li>Chart of accounts design</li>
+          <li>KPI and dashboard development</li>
+          <li>Systems and IT finance support</li>
+        </ul>
+      </div>
+
+      <!-- Treasury & Payables Support -->
+      <div class="bg-white p-6 rounded shadow">
+        <h2 class="text-2xl font-semibold mb-2">Treasury & Payables Support</h2>
+        <p class="text-gray-700 mb-4">Build discipline around liquidity and payment processes.</p>
+        <ul class="list-disc pl-5 space-y-2 text-gray-800">
+          <li>Cash flow planning and visibility</li>
+          <li>Vendor payment workflows</li>
+          <li>Banking and treasury advisory</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-16 bg-blue-50 text-center">
+    <h2 class="text-3xl font-semibold mb-4">Need a Clean Slate?</h2>
+    <p class="text-lg text-gray-700 mb-6">We’ll help you rebuild your finance foundation to support your next stage of growth.</p>
+    <a href="contact.html" class="bg-blue-600 text-white px-6 py-3 rounded text-lg font-semibold">Let’s Talk</a>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header-placeholder").innerHTML = data);
+
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+  </script>
+
+</body>
+</html>

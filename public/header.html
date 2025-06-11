@@ -1,61 +1,97 @@
 <!-- header.html -->
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-<header class="bg-white shadow-md z-50 relative">
-  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-    <a href="index.html" class="text-xl font-bold text-blue-600">Compass CFO</a>
+<header x-data="{ mobileOpen: false, dropdownOpen: false, dropdownTimer: null }" class="bg-white shadow-md relative z-50">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
+    <!-- Logo -->
+    <a href="index.html" class="text-xl font-bold text-blue-600">Fractional CFO</a>
 
-    <!-- Mega Menu Navigation -->
-    <nav class="relative hidden md:block" x-data="{ open: false, timer: null }" @mouseenter="clearTimeout(timer); open = true" @mouseleave="timer = setTimeout(() => open = false, 300)">
-      <button class="font-medium text-gray-700 hover:text-blue-600">
-        Services
-      </button>
-
-      <!-- Mega Menu -->
-      <div x-show="open" x-transition class="absolute left-1/2 transform -translate-x-1/2 mt-4 w-screen max-w-5xl bg-white shadow-xl p-8 rounded grid grid-cols-4 gap-6 text-sm">
-        <!-- Foundation -->
-        <div>
-          <h3 class="text-xs font-bold uppercase tracking-wide text-gray-500 mb-2">Foundation</h3>
-          <ul class="space-y-1">
-            <li><a href="solution.html" class="hover:text-blue-600">Accounting Systems</a></li>
-            <li><a href="solution.html" class="hover:text-blue-600">Cash Flow Processes</a></li>
-            <li><a href="solution.html" class="hover:text-blue-600">Advisor Coordination</a></li>
-          </ul>
-        </div>
-        <!-- Health -->
-        <div>
-          <h3 class="text-xs font-bold uppercase tracking-wide text-gray-500 mb-2">Health</h3>
-          <ul class="space-y-1">
-            <li><a href="solution.html" class="hover:text-blue-600">Budgeting & Forecasting</a></li>
-            <li><a href="solution.html" class="hover:text-blue-600">Production & Ops</a></li>
-            <li><a href="solution.html" class="hover:text-blue-600">Banking & Capital</a></li>
-          </ul>
-        </div>
-        <!-- Growth -->
-        <div>
-          <h3 class="text-xs font-bold uppercase tracking-wide text-gray-500 mb-2">Growth</h3>
-          <ul class="space-y-1">
-            <li><a href="solution.html" class="hover:text-blue-600">Strategic Planning</a></li>
-            <li><a href="solution.html" class="hover:text-blue-600">Risk Assessments</a></li>
-            <li><a href="solution.html" class="hover:text-blue-600">Operating Rhythm</a></li>
-          </ul>
-        </div>
-        <!-- Value -->
-        <div>
-          <h3 class="text-xs font-bold uppercase tracking-wide text-gray-500 mb-2">Value</h3>
-          <ul class="space-y-1">
-            <li><a href="solution.html" class="hover:text-blue-600">Exit Planning</a></li>
-            <li><a href="solution.html" class="hover:text-blue-600">Readiness</a></li>
-            <li><a href="solution.html" class="hover:text-blue-600">Valuation & Multiples</a></li>
-          </ul>
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex items-center space-x-6">
+      <!-- Solutions Dropdown -->
+      <div class="w-full left-2"
+           @mouseenter="clearTimeout(dropdownTimer); dropdownOpen = true"
+           @mouseleave="dropdownTimer = setTimeout(() => dropdownOpen = false, 200)">
+        <button class="font-medium text-gray-700 hover:text-blue-600">Solutions</button>
+        <div x-show="dropdownOpen" x-cloak x-transition.origin.top class="absolute left-0 right-0 top-full w-full bg-white shadow-lg">
+          <div class="max-w-7xl mx-auto p-8 grid grid-cols-4 gap-6">
+            <!-- Foundation -->
+            <div>
+              <h3 class="text-xs font-semibold uppercase text-gray-500 mb-2">Foundation</h3>
+              <ul class="space-y-1">
+                <li><a href="foundation.html" class="hover:text-blue-600">Interim CFO & Accounting</a></li>
+                <li><a href="foundation.html" class="hover:text-blue-600">Financial Systems & Dashboards</a></li>
+                <li><a href="foundation.html" class="hover:text-blue-600">Treasury & Payables Support</a></li>
+              </ul>
+            </div>
+            <!-- Health & Performance -->
+            <div>
+              <h3 class="text-xs font-semibold uppercase text-gray-500 mb-2">Health & Performance</h3>
+              <ul class="space-y-1">
+                <li><a href="health.html" class="hover:text-blue-600">Monthly Reviews & KPIs</a></li>
+                <li><a href="health.html" class="hover:text-blue-600">Cash Flow Analysis</a></li>
+                <li><a href="health.html" class="hover:text-blue-600">Physician CFO Services</a></li>
+              </ul>
+            </div>
+            <!-- Strategic Growth -->
+            <div>
+              <h3 class="text-xs font-semibold uppercase text-gray-500 mb-2">Strategic Growth</h3>
+              <ul class="space-y-1">
+                <li><a href="growth.html" class="hover:text-blue-600">FP&A as a Service</a></li>
+                <li><a href="growth.html" class="hover:text-blue-600">CFO Coaching</a></li>
+                <li><a href="growth.html" class="hover:text-blue-600">Leadership & Confidence Building</a></li>
+              </ul>
+            </div>
+            <!-- Exit & Transactions -->
+            <div>
+              <h3 class="text-xs font-semibold uppercase text-gray-500 mb-2">Exit & Transactions</h3>
+              <ul class="space-y-1">
+                <li><a href="exit.html" class="hover:text-blue-600">M&A Advisory</a></li>
+                <li><a href="exit.html" class="hover:text-blue-600">Capital & Structuring</a></li>
+                <li><a href="exit.html" class="hover:text-blue-600">Succession & Turnaround</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
+      <!-- Static Links -->
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="industries.html" class="font-medium text-gray-700 hover:text-blue-600">Industries</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact</a>
     </nav>
 
-    <!-- Static links -->
-    <nav class="space-x-4 text-gray-700 font-medium hidden md:block">
-      <a href="about.html" class="hover:text-blue-600">About</a>
-      <a href="industries.html" class="hover:text-blue-600">Industries</a>
-      <a href="contact.html" class="hover:text-blue-600">Contact</a>
-    </nav>
+  <!-- Mobile Trigger -->
+  <button @click="mobileOpen = !mobileOpen" class="md:hidden text-gray-700 focus:outline-none" aria-label="Toggle menu">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+    </svg>
+  </button>
+</div>
+
+<!-- Mobile Menu -->
+<div x-show="mobileOpen" x-cloak x-transition class="md:hidden bg-white shadow-lg">
+  <a href="index.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">Home</a>
+  <button @click="dropdownOpen = !dropdownOpen" class="w-full text-left px-6 py-3 flex justify-between items-center text-gray-700 hover:bg-gray-100">
+    Solutions
+    <svg :class="{'rotate-180': dropdownOpen}" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+    </svg>
+  </button>
+  <div x-show="dropdownOpen" x-cloak x-transition class="space-y-2 bg-gray-50">
+    <a href="foundation.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100">Interim CFO & Accounting</a>
+    <a href="foundation.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100">Financial Systems & Dashboards</a>
+    <a href="foundation.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100">Treasury & Payables Support</a>
+    <a href="health.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100">Monthly Reviews & KPIs</a>
+    <a href="health.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100">Cash Flow Analysis</a>
+    <a href="health.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100">Physician CFO Services</a>
+    <a href="growth.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100">FP&A as a Service</a>
+    <a href="growth.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100">CFO Coaching</a>
+    <a href="growth.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100">Leadership & Confidence</a>
+    <a href="exit.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100">M&A Advisory</a>
+    <a href="exit.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100">Capital & Structuring</a>
+    <a href="exit.html" class="block px-8 py-2 text-gray-700 hover:bg-gray-100">Succession & Turnaround</a>
   </div>
+  <a href="about.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">About</a>
+  <a href="industries.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">Industries</a>
+  <a href="contact.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">Contact</a>
+</div>
 </header>

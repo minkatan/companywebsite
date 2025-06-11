@@ -9,6 +9,10 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <style>
+    [x-cloak] { display: none !important; }
+  </style>
+   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 </head>
 <body class="font-sans antialiased bg-white text-gray-900">
 
@@ -20,7 +24,35 @@
     <p class="text-xl max-w-3xl mx-auto">Choose the level of support that fits your growth stage, investor expectations, and operational complexity.</p>
   </section>
 
-  <!-- Service Tiers -->
+  <!-- Audience Blocks -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+      <div>
+        <h2 class="text-3xl font-bold text-blue-600 mb-4">For VC-Backed Startups</h2>
+        <p class="text-gray-700 mb-6">Your Fractional CFO for When Growth Moves Faster Than Your Finance Team</p>
+        <ul class="list-disc pl-5 space-y-2 text-gray-800">
+          <li>Investor-ready reporting & pitch support</li>
+          <li>Dynamic forecasting & burn rate visibility</li>
+          <li>SaaS & subscription metric dashboards</li>
+          <li>Fast turnaround for audits and diligence</li>
+        </ul>
+        <p class="mt-4"><a href="contact.html" class="text-blue-600 font-semibold hover:underline">Pitching soon? Let’s get your numbers investor-ready.</a></p>
+      </div>
+      <div>
+        <h2 class="text-3xl font-bold text-blue-600 mb-4">For PE-Owned Platforms</h2>
+        <p class="text-gray-700 mb-6">Operational Finance Built for Private Equity Rigor</p>
+        <ul class="list-disc pl-5 space-y-2 text-gray-800">
+          <li>Budget vs actuals, site-level margin tracking</li>
+          <li>Lender & sponsor reporting packages</li>
+          <li>Integration support during M&A</li>
+          <li>Exit prep, valuation modeling & diligence</li>
+        </ul>
+        <p class="mt-4"><a href="contact.html" class="text-blue-600 font-semibold hover:underline">Need clarity before your next board call?</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Existing Service Tiers (left unchanged) -->
   <section class="py-16">
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid md:grid-cols-3 gap-10">
@@ -77,7 +109,7 @@
   <!-- Testimonials Slider -->
   <section class="py-16 bg-gray-50">
     <div class="max-w-6xl mx-auto px-4" x-data="{ active: 0, testimonials: [
-      { name: 'CEO, Growth Clinic Group', quote: 'Compass CFO turned our numbers into a narrative our board could actually understand. It changed how we fundraise.' },
+      { name: 'CEO, Growth Clinic Group', quote: 'Fractional CFO turned our numbers into a narrative our board could actually understand. It changed how we fundraise.' },
       { name: 'Founder, Digital Health Startup', quote: 'We needed clean books, fast. Their team delivered in weeks what others took months to clean.' },
       { name: 'PE Operating Partner', quote: 'Finally, a finance partner who gets what PE actually needs from reporting — and delivers.' },
       { name: 'COO, Diagnostics Lab', quote: 'From billing chaos to actionable dashboards in under 90 days. Worth every dollar.' }
@@ -108,14 +140,17 @@
 
   <div id="footer-placeholder"></div>
 
-  <script>
-    fetch("header.html")
-      .then(res => res.text())
-      .then(data => document.getElementById("header-placeholder").innerHTML = data);
-
-    fetch("footer.html")
-      .then(res => res.text())
-      .then(data => document.getElementById("footer-placeholder").innerHTML = data);
-  </script>
+ 
+    <script>
+      document.addEventListener('alpine:init', () => {
+        fetch("header.html")
+          .then(r=>r.text())
+          .then(html=> {
+            document.getElementById("header-placeholder").innerHTML = html;
+            Alpine.initTree(document.getElementById("header-placeholder"));
+          });
+        fetch("footer.html").then(r=>r.text()).then(html=>document.getElementById("footer-placeholder").innerHTML = html);
+      });
+    </script>
 </body>
 </html>

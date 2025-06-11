@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strategic Growth Services | Fractional CFO</title>
+  <meta name="description" content="Outsourced FP&A, CFO coaching, and leadership support to scale healthcare companies with clarity and strategy." />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    [x-cloak] { display: none !important; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+<body class="font-sans antialiased bg-white text-gray-900">
+  <div id="header-placeholder"></div>
+
+  <section class="text-center py-20 bg-gray-100">
+    <h1 class="text-4xl font-bold mb-4">Strategic Growth Services</h1>
+    <p class="text-lg max-w-3xl mx-auto">Build clarity, momentum, and confidence in your healthcare business. We help you scale with purpose through FP&A support, executive coaching, and leadership transformation.</p>
+  </section>
+
+  <section class="py-16">
+    <img src="../images/image2.jpg" alt="FP&A Lifecycle" class="mx-auto max-w-4xl rounded" />
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10">
+      <div class="bg-white p-6 rounded shadow">
+        <h2 class="text-2xl font-semibold mb-2">FP&A as a Service</h2>
+        <p class="text-gray-700 mb-4">Turn strategy into measurable outcomes with expert planning, forecasting, and performance analysis. Our FP&A services bring Fortune 500-level rigor to growing healthcare companies without the full-time cost.</p>
+        <ul class="list-disc pl-5 space-y-1 text-gray-700">
+          <li>Custom dashboards and performance tracking</li>
+          <li>Forecast vs. actual variance reporting</li>
+          <li>Scenario modeling and strategic planning</li>
+          <li>Actionable financial insights for decision-making</li>
+        </ul>
+      </div>
+      <div class="bg-white p-6 rounded shadow">
+        <h2 class="text-2xl font-semibold mb-2">CFO Coaching & Executive Support</h2>
+        <p class="text-gray-700 mb-4">Running a company is lonely. Our coaching support helps owner-operators, CEOs, and first-time finance leaders build confidence, make better decisions, and scale sustainably.</p>
+        <ul class="list-disc pl-5 space-y-1 text-gray-700">
+          <li>Monthly advisory sessions and financial literacy training</li>
+          <li>Confidence building for board and investor conversations</li>
+          <li>Clarity on P&L, KPIs, and strategic growth levers</li>
+          <li>Leadership development from a financial lens</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-blue-50 text-center py-12">
+    <h2 class="text-2xl font-semibold mb-4">Plan with Confidence, Grow with Insight</h2>
+    <p class="text-gray-700 max-w-2xl mx-auto mb-6">Let’s build the financial playbook that gets your business from here to where you want it to be. We’ll give you the structure, data, and strategy to make it happen.</p>
+    <a href="contact.html" class="bg-blue-600 text-white px-6 py-3 rounded text-lg font-semibold">Book Your Growth Consultation</a>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header-placeholder").innerHTML = data);
+
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+  </script>
+</body>
+</html>
